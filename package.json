@@ -1,0 +1,22 @@
+{
+  "name": "smartconstruction",
+  "version": "0.0.1",
+  "description": "test for smart construction",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhangxiaoquan/smartConstruction.git"
+  },
+  "author": "zhangxq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhangxiaoquan/smartConstruction/issues"
+  },
+  "homepage": "https://github.com/Zhangxiaoquan/smartConstruction#readme",
+  "dependencies": {
+    "sparrow-packer": "^0.1.4"
+  }
+}
