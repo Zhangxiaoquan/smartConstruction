@@ -1,0 +1,62 @@
+{
+  "sourceRoot": "src", // source root path
+  "outputRoot": "dist", // output root path
+  "bundle": {
+    "format": "iife", // Immediately-Invoked Function Expression
+    "version": "auto", // auto increase file version
+    "autoInsert": true, // auto insert js & css path to page content
+    //"relativePath": "", // relative reference path to bundle dir 文件的相对地址
+    "pagePath": "", // output path for page files
+    "scriptPath": "js", // output path for script files
+    "cssPath": "css", // output path for css files
+    "external": [
+      "vue" // set vue as external dependence
+    ],
+    "uglify": false, // uglify script bundle
+    "sourcemap": false, // output sourcemap files
+    "globals": {
+      "vue": "Vue" // set vue global name
+    }
+  },
+  /*
+  "vue": {
+    "clientRender": false // bundle with vue-client-render module importing
+  },
+  */
+  "modules": [
+    {
+      "name": "lib",
+      "source": {
+        "lib": "lib"
+      },
+      "output": {
+        "lib": "js/lib"
+      }
+    },
+    {
+      "name": "a", // module name
+      "source": {
+        "dir": "module-a", // module source dir
+        "page": "a.html", // page file name
+        "script": "script/index.js", // script entry
+        "assets": "assets" // other static files
+      },
+      "watch": [
+        "lib" // notify path "src/lib"
+      ]
+    },
+    {
+      "name": "b", // module name
+      "source": {
+        "dir": "module-b", // module source dir
+        "page": "b.html", // page file name
+        "script": "script/index.js", // script entry
+        "css": "css/index.css", // css source entry
+        "assets": "assets" // other static files
+      },
+      "watch": [
+        "lib" // notify path "src/lib"
+      ]
+    }
+  ]
+}
